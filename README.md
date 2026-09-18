@@ -117,8 +117,6 @@ Recommended screenshots:
 - Booking details
 - Cancellation
 
-> Replace `screenshot.png` with an actual screenshot before publishing.
-
 ## 🎯 Learning Objectives
 
 This project demonstrates practical use of:
