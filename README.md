@@ -1,154 +1,173 @@
-# 🚌 Bus Reservation System Using Python
+# 🚌 Bus Reservation System
 
-A simple Bus Reservation System developed using Python Tkinter and SQLite. The application provides a graphical interface for booking bus tickets, searching bookings, cancelling bookings, and viewing all reservations.
-
-## 📌 Project Overview
-
-The Bus Reservation System is a desktop-based application designed to manage bus ticket reservations.
-
-The system uses a graphical user interface built with Tkinter and stores booking information in an SQLite database. Users can select a bus, choose an available seat, make a booking, search for existing bookings, cancel reservations, and view all bookings.
+A desktop **Bus Reservation System built with Python, Tkinter, and SQLite**.  
+The application provides a simple interface for searching buses, checking seat availability, booking tickets, viewing bookings, and cancelling reservations.
 
 ## ✨ Features
 
-- 🚌 Bus selection
-- 🎟️ Ticket booking
-- 💺 Available seat selection
-- 🔍 Search booking
-- ❌ Cancel booking
-- 📋 View all bookings
-- 💾 SQLite database storage
-- 🖥️ User-friendly graphical interface
-- ⚠️ Input validation
-- 🔄 Automatic seat availability checking
+- 🔎 Search available buses
+- 💺 Check seat availability
+- 🎫 Book bus tickets
+- 📋 View existing bookings
+- ❌ Cancel reservations
+- 🗃️ Store reservation data using SQLite
+- 🖥️ Tkinter-based desktop GUI
+- ⚡ Lightweight and easy to run locally
 
-## 🛠️ Technologies Used
+## 🛠️ Technologies
 
-- Python
-- Tkinter
-- SQLite
-- SQL
-- Python SQLite3 module
+| Technology | Purpose |
+|---|---|
+| Python | Application logic |
+| Tkinter | Graphical user interface |
+| SQLite | Local database |
+| sqlite3 | Python database interface |
 
-## 🏗️ System Architecture
+## 📁 Project Structure
 
-              ┌──────────────────────┐
-              │   Tkinter GUI        │
-              └──────────┬───────────┘
-                         │
-          ┌──────────────┼──────────────┐
-          │              │              │
-          ▼              ▼              ▼
-      Book Ticket   Search Booking   Cancel Booking
-          │              │              │
-          └──────────────┼──────────────┘
-                         ▼
-              ┌──────────────────────┐
-              │   SQLite Database    │
-              │ bus_reservation.db   │
-              └──────────────────────┘
-              
-## ⚙️ How It Works
-
-1. The application starts with the main menu.
-2. The user can choose to book, search, cancel, or view bookings.
-3. During booking, the user enters their name and selects a bus.
-4. The system checks the SQLite database for already booked seats.
-5. Only available seats are displayed.
-6. The booking information is stored in the SQLite database.
-7. Users can search their booking using their name or bus.
-8. Existing bookings can also be cancelled.
-9. All stored bookings can be displayed using the View All Bookings option.
-
-## 💺 Available Buses and Seats
-
-### Bus 1
-
-* A1
-* A2
-* A3
-* A4
-
-### Bus 2
-
-* B1
-* B2
-* B3
-* B4
-
-The system automatically removes already booked seats from the available seat list.
-
-## 📂 Project Structure
-
-BUS-RESERVATION-SYSTEM-USING-PYTHON
+```text
+BUS-RESERVATION-SYSTEM-USING-PYTHON/
 │
-├── BusReservationSystem
-│   ├── busreservation main.py
-│   ├── bus_reservation.db
-│   └── portfolio.db
+├── BusReservationSystem/
+│   ├── bus_reservation.py
+│   └── bus_reservation.db
 │
-└── README.md
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
+│   └── pull_request_template.md
+│
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+└── SECURITY.md
+```
 
-## 🚀 How to Run
+## 🚀 Getting Started
 
-### Step 1: Install Python
+### Prerequisites
 
-Make sure Python is installed on your computer.
+Install Python 3.
 
-Check the installation using:
-
+```bash
 python --version
+```
 
-### Step 2: Clone the Repository
+Tkinter and SQLite are normally included with standard Python installations.
 
+### Run the Project
+
+1. Clone the repository:
+
+```bash
 git clone https://github.com/gurusaeth12/BUS-RESERVATION-SYSTEM-USING-PYTHON.git
+```
 
-### Step 3: Open the Project Folder
+2. Enter the repository:
 
-Navigate to the project directory:
-
+```bash
 cd BUS-RESERVATION-SYSTEM-USING-PYTHON
+```
 
-### Step 4: Run the Application
+3. Open the application folder:
 
-Run the Python file:
+```bash
+cd BusReservationSystem
+```
 
-python "busreservation main.py"
+4. Run:
 
-The Bus Reservation System window will open.
+```bash
+python bus_reservation.py
+```
+
+## 🖥️ Application Workflow
+
+```text
+Search Bus
+    ↓
+Check Seat Availability
+    ↓
+Book Ticket
+    ↓
+Save Booking in SQLite
+    ↓
+View Booking / Cancel Booking
+```
+
+## 🗄️ Database
+
+The application uses SQLite for local storage. The included database file is used by the reservation application to store its local booking data.
 
 ## 📸 Project Preview
 
-[Bus Reservation System](screenshot.png)
+Add screenshots of the **actual application** to the repository, for example:
 
-## 🎯 Learning Outcomes
+```markdown
+![Bus Reservation System](screenshot.png)
+```
 
-Through this project, the following concepts were practiced:
+Recommended screenshots:
+- Main application window
+- Bus search
+- Seat availability
+- Ticket booking
+- Booking details
+- Cancellation
 
-* Python programming
-* GUI development using Tkinter
-* Database management using SQLite
-* SQL queries
-* CRUD operations
-* Event-driven programming
-* Input validation
-* User interface design
+> Replace `screenshot.png` with an actual screenshot before publishing.
+
+## 🎯 Learning Objectives
+
+This project demonstrates practical use of:
+
+- Python programming
+- Tkinter GUI development
+- SQLite database operations
+- CRUD-style operations
+- User input handling
+- Desktop application development
 
 ## 🔮 Future Improvements
 
-* Add more buses and routes
-* Add passenger contact details
-* Add date and time selection
-* Add seat layout visualization
-* Generate digital tickets
-* Add admin login
-* Add payment integration
-* Export booking details
-* Improve database structure
+- User login and registration
+- Admin dashboard
+- Bus schedule management
+- Automatic ticket generation
+- Online payment integration
+- Email/SMS confirmation
+- Improved seat-selection interface
+- Cloud database support
 
-## 👨‍💻 Author
+## 🤝 Contributing
 
-**Gurusaeth**
+Contributions are welcome!
 
-GitHub: [https://github.com/gurusaeth12](https://github.com/gurusaeth12)
+Please read **[CONTRIBUTING.md](CONTRIBUTING.md)** before submitting changes.
 
-⭐ If you find this project useful, consider giving the repository a star.
+## 🐛 Issues
+
+Found a bug or have an improvement idea?
+
+Use the repository's GitHub **Issues** section. Issue templates are provided for:
+
+- Bug reports
+- Feature requests
+
+## 🔐 Security
+
+For security-related issues, please read **[SECURITY.md](SECURITY.md)** and avoid publicly posting sensitive vulnerability details.
+
+## 📜 Code of Conduct
+
+Please read **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** to understand the expected community behavior.
+
+## 📄 License
+
+This project is distributed under the license included in this repository.
+
+---
+
+⭐ If you find this project useful, consider giving it a star!
