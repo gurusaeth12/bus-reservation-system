@@ -105,7 +105,7 @@ The application uses SQLite for local storage. The included database file is use
 
 Add screenshots of the **actual application** to the repository, for example:
 
-```markdown
+`
 ![Bus Reservation System](screenshot.png)
 ```
 
